@@ -9,6 +9,8 @@
 
         {!! Html::style('assets/css/app.css') !!}
 
+	@yield('header')
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -19,7 +21,7 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-inverse">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -35,8 +37,17 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-		<li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="/calendar">Calendar</a></li>
+		<li><a href="/">Home<span class="sr-only">(current)</span></a></li>
+		<li><a href="/calendar">Calendar</a></li>
+		<li class="dropdown">
+		  <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
+		  <ul class="dropdown-menu">
+		    <li><a href="/about/general_info">General Info</a></li>
+		    <li><a href="/about/FAQ">FAQ</a></li>
+		    <li><a href="/about/facilit_info">Facility Info</a></li>
+		    <li><a href="/news">News</a></li>
+		  </ul>
+		</li>
 		<li class="dropdown">
 		  <a href="/services" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
 		  <ul class="dropdown-menu">
@@ -49,9 +60,7 @@
 		    <li><a href="/hospice_support">Hospice Support</a></li>
 		  </ul>
 		</li>
-		<li><a href="/news">News</a></li>
 		<li><a href="/contact_us">Contact Us</a></li>
-		<li><a href="/login" >Login/Register</a></li>
 		<form class="navbar-form navbar-left" role="search">
 			<div class="input-group">
                             <input type="text" class="form-control" placeholder="Search Haven Manor">
@@ -84,12 +93,14 @@
 	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	{{ Html::script('assets/js/bootstrap.min.js') }}
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<script>
+	(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
 	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
 	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
     </body>
 </html>

@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/news', function () {
-    return view('news');
-});
+Route::get('/news', 'NewsController@showNews');
 
-Route::get('/calendar', function () {
-    return view('calendar');
-});
+Route::get('/calendar', 'CalendarController@showCalendar');

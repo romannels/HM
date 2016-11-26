@@ -1,0 +1,25 @@
+/* For some reason, on the home page*/
+/*the header extends outside the page bounds */
+.container > div.navbar-header {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+div.container > div.navbar-collapse {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+a.navbar-left {
+  margin-left: 0px; }
+
+button.navbar-toggle {
+  margin-right: 15px; }
+
+/* Force the carousel to cover the entire page */
+#myCarousel {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+div.container {
+  width: 100%; }
+
+/*# sourceMappingURL=home.css.map */

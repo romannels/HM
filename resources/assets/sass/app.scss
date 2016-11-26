@@ -1,5 +1,9 @@
+$navbar-margin-bottom: 0px;
+$navbar-border-radius: 0px;
+$navbar-inverse-bg: #18305c;
+$navbar-inverse-link-color: #FFF;
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 .nounderline {
-    text-decoration: none !important; /* override the any-link styling
+    text-decoration: none !important; /* override the any-link styling */
 }

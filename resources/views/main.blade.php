@@ -3,6 +3,10 @@
 
 @section('title', 'Main Page')
 
+@section('header')
+{!! Html::style('assets/css/home.css') !!}
+@stop
+
 @section('content')
 <style>
      .container {
